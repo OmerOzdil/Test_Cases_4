@@ -1,5 +1,4 @@
-  Feature:
-
+  Feature:Calendar Event Page
     Scenario: Check three icon
       Given let user logged in as "usernamestoremanager" "password"
       When user navigates "Activities" "Calendar Events"
@@ -31,7 +30,7 @@
       And user click on create Calendar Event option
       And user enter start time as "09:00 PM"
       Then verify that end time automatically set "10:00 PM"
-    @wip
+
     Scenario: Test case 7
       Given let user logged in as "usernamestoremanager" "password"
       When user navigates "Activities" "Calendar Events"

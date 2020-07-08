@@ -17,15 +17,16 @@ import static org.junit.Assert.*;
 public class CalenderEvents {
 
     @Given("let user logged in as {string} {string}")
-    public void let_user_logged_in_as(String string, String string2) {
+    public void let_user_logged_in_as(String username, String password) {
         Driver.get().get(ConfigurationReader.get("url"));
         Login login = new Login();
-        login.login(ConfigurationReader.get(string),ConfigurationReader.get(string2));
+        
+        BrowserUtils.waitFor(1);
+        login.login(ConfigurationReader.get(username),ConfigurationReader.get(password));
     }
     @When("user navigates {string} {string}")
     public void user_navigates(String tab, String module) {
         BrowserUtils.waitForPageToLoad(5);
-
         Dashboard dashboard = new Dashboard();
         dashboard.navigateTomodule(tab,module);
 

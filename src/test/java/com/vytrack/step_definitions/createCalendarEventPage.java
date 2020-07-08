@@ -13,7 +13,9 @@ import org.openqa.selenium.WebElement;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -128,6 +130,74 @@ public class createCalendarEventPage {
         assertTrue(createCalendarEvent.endDateBox.isDisplayed());
         assertFalse(createCalendarEvent.startTime.isDisplayed());
         assertFalse(createCalendarEvent.endTime.isDisplayed());
+    }
+    @When("user select repeat check box")
+    public void user_select_repeat_check_box() {
+
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        BrowserUtils.waitForPageToLoad(4);
+        try {
+            createCalendarEvent.repeatCheckBox.click();
+        }catch (Exception e){
+            BrowserUtils.waitForClickablility(createCalendarEvent.repeatCheckBox,5);
+            BrowserUtils.waitFor(1);
+            createCalendarEvent.repeatCheckBox.click();
+        }
+    }
+
+
+    @Then("verify that repeat check box is selected")
+    public void verify_that_repeat_check_box_is_selected() {
+
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        assertTrue(createCalendarEvent.repeatCheckBox.isSelected());
+
+    }
+    @Then("verify that {string} is selected as default and see the following options")
+    public void verify_that_is_selected_as_default_and_see_the_following_options(String defaultoption, List<String> expectedOptions) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+
+        WebElement firstSelectedOption = createCalendarEvent.getRepeatOptions().getFirstSelectedOption();
+
+        // retrieve the text of the default option
+        String actualOption = firstSelectedOption.getText();
+        assertEquals(defaultoption, actualOption);
+
+        // get the each web element from the select tag and put it in the List
+        List<WebElement> options = createCalendarEvent.getRepeatOptions().getOptions();
+
+        // create a new List to put actual options
+        List<String> actualOptions = new ArrayList<>();
+
+        // put each options in the crated List above.
+        for (WebElement option : options) {
+            actualOptions.add(option.getText());
+            System.out.println(option.getText());
+        }
+        assertEquals(expectedOptions,actualOptions);
+    }
+    @Then("verify that repeat every button is selected")
+    public void verify_that_repeat_every_button_is_selected() {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+         assertTrue(createCalendarEvent.repeatEveryRadioButton.isSelected());
+    }
+
+    @Then("verify that Never radio button is selected as an Ends option")
+    public void verify_that_never_radio_button_is_selected_as_an_ends_option() {
+
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        assertTrue(createCalendarEvent.neverButton.isSelected());
+
+    }
+
+
+    @Then("verify that {string} is displayed")
+    public void verify_that_is_displayed(String expectedText) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        String actualText=createCalendarEvent.summaryText.getText() + createCalendarEvent.dailyText.getText();
+        System.out.println("actualText = " + actualText);
+
+        assertEquals(expectedText,actualText);
 
     }
 }

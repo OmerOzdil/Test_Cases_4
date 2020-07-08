@@ -4,6 +4,7 @@ import com.vytrack.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.Select;
 
 public class CreateCalendarEvent {
     public CreateCalendarEvent() {
@@ -43,6 +44,30 @@ public class CreateCalendarEvent {
     @FindBy(xpath = "//input[starts-with(@id,'date_selector_oro_calendar_event_form_end-uid')]")
     public WebElement endDateBox;
 
+    @FindBy(xpath = "//input[starts-with(@id,'recurrence-repeat')]")
+    public WebElement repeatCheckBox;
+
+    @FindBy(xpath = "//select[starts-with(@id,'recurrence-repeats')]")
+    public WebElement repeatDropDown;
+
+    @FindBy(xpath = "(//input[@type='radio'])[1]")
+    public WebElement repeatEveryRadioButton;
+
+    @FindBy(xpath = "(//input[@type='radio'])[3]")
+    public WebElement neverButton;
+
+    @FindBy(xpath = "//label[text()='Summary:']")
+    public WebElement summaryText;
+
+    @FindBy(xpath = "//span[text()='Daily every 1 day']")
+    public WebElement dailyText;
+
+
+    public Select getRepeatOptions(){
+        return new Select(repeatDropDown);
+    }
+
+    
 
 
 

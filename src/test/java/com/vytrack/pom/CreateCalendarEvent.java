@@ -62,6 +62,16 @@ public class CreateCalendarEvent {
     @FindBy(xpath = "//span[text()='Daily every 1 day']")
     public WebElement dailyText;
 
+    @FindBy(xpath = "(//*[@type='radio'])[4]")
+    public WebElement afterRadioButton;
+
+    @FindBy(xpath = "(//input[@class='recurrence-subview-control__number'])[7]")
+    public WebElement afterOccurrenceInputBox;
+
+    @FindBy(xpath = "//span[text()=', end after 10 occurrences']")
+    public WebElement occurrenceText;
+
+
 
     public Select getRepeatOptions(){
         return new Select(repeatDropDown);

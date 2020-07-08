@@ -200,4 +200,24 @@ public class createCalendarEventPage {
         assertEquals(expectedText,actualText);
 
     }
+
+    @When("user enters {string} as an occurrence as an Ends option")
+    public void user_enters_as_an_occurrence_as_an_ends_option(String number) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        createCalendarEvent.afterRadioButton.click();
+        createCalendarEvent.afterOccurrenceInputBox.sendKeys(number);
+        createCalendarEvent.afterOccurrenceInputBox.submit();
+
+    }
+
+    @Then("verify that  this message {string} is displayed")
+    public void verify_that_this_message_is_displayed(String expectedText) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        BrowserUtils.waitForVisibility(createCalendarEvent.occurrenceText,3);
+
+        String actualText=createCalendarEvent.summaryText.getText() + createCalendarEvent.dailyText.getText() + createCalendarEvent.occurrenceText.getText();
+        System.out.println("actualText = " + actualText);
+        assertEquals(expectedText,actualText);
+
+    }
 }

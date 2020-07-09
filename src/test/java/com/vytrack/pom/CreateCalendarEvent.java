@@ -71,6 +71,14 @@ public class CreateCalendarEvent {
     @FindBy(xpath = "//span[text()=', end after 10 occurrences']")
     public WebElement occurrenceText;
 
+    @FindBy(xpath = "(//input[@type='radio'])[5]")
+    public WebElement byRadioButton;
+
+    @FindBy(xpath = "//input[starts-with(@id,'dp15942')]")
+    public WebElement dateBox;
+
+    @FindBy(xpath = "//span[starts-with(text(),', end by')]")
+    public WebElement byDateText;
 
 
     public Select getRepeatOptions(){

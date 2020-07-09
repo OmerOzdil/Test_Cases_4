@@ -9,6 +9,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import java.text.ParseException;
@@ -21,8 +22,6 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 public class createCalendarEventPage {
-
-
 
 
     @Then("verify that Save and Close,Save and New and Save options available")
@@ -220,4 +219,33 @@ public class createCalendarEventPage {
         assertEquals(expectedText,actualText);
 
     }
+
+    @When("user  select By {string} as an Ends option")
+    public void user_select_by_as_an_ends_option(String date) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        createCalendarEvent.byRadioButton.click();
+
+        //BrowserUtils.waitForVisibility(createCalendarEvent.dateBox,3);
+        //createCalendarEvent.dateBox.sendKeys(date);
+        BrowserUtils.waitFor(1);
+
+        JavascriptExecutor jse = (JavascriptExecutor) Driver.get();
+        jse.executeScript("arguments[0].value='Nov 18,2021';", createCalendarEvent.dateBox);
+
+        createCalendarEvent.dateBox.submit();
+
+    }
+
+    @Then("verify that the message {string} is displayed")
+    public void verify_that_the_message_is_displayed(String expectedText) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        BrowserUtils.waitFor(2);
+        String actualText=createCalendarEvent.summaryText.getText() +
+                createCalendarEvent.dailyText.getText() +
+                createCalendarEvent.byDateText.getText();
+        System.out.println("actualText = " + actualText);
+        assertEquals(expectedText,actualText);
+
+    }
+
 }

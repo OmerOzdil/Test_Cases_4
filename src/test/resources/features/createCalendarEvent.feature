@@ -1,10 +1,10 @@
 Feature: Create Calendar Events Page
-
+  @wip
   Scenario: Test Case 5
     Given let user logged in as "usernamestoremanager" "password"
-    When user navigates "Activities" "Calendar Events"
-    And user click on create Calendar Event option
-    Then verify that difference between end and start time is exactly 1 hour
+#    When user navigates "Activities" "Calendar Events"
+#    And user click on create Calendar Event option
+#    Then verify that difference between end and start time is exactly 1 hour
 
 
   Scenario: Test Case 8
@@ -30,7 +30,6 @@ Feature: Create Calendar Events Page
     Then verify that Never radio button is selected as an Ends option
     Then verify that "Summary:Daily every 1 day" is displayed
 
-  @wip
   Scenario: Test Case 10
     Given let user logged in as "usernamestoremanager" "password"
     When  user navigates "Activities" "Calendar Events"

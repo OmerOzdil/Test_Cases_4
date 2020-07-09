@@ -29,7 +29,7 @@ Feature: Create Calendar Events Page
     Then verify that repeat every button is selected
     Then verify that Never radio button is selected as an Ends option
     Then verify that "Summary:Daily every 1 day" is displayed
-
+  @jenkins
   Scenario: Test Case 10
     Given let user logged in as "usernamestoremanager" "password"
     When  user navigates "Activities" "Calendar Events"

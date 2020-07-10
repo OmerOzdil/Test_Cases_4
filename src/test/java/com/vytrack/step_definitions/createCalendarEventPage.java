@@ -270,7 +270,7 @@ public class createCalendarEventPage {
         String actualText=createCalendarEvent.summaryText.getText()+createCalendarEvent.repeatOnDaysText.getText();
 
         assertEquals(expectedText,actualText);
-        System.out.println("gip hup is added");
+        
 
 
     }

@@ -1,6 +1,7 @@
 package com.vytrack.pom;
 
 import com.vytrack.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -80,9 +81,17 @@ public class CreateCalendarEvent {
     @FindBy(xpath = "//span[starts-with(text(),', end by')]")
     public WebElement byDateText;
 
+    @FindBy(xpath = "//span[contains(text(),'Weekly every 1 week on')]")
+    public WebElement repeatOnDaysText;
+
 
     public Select getRepeatOptions(){
         return new Select(repeatDropDown);
+    }
+
+    public WebElement repeatOnDay(String day){
+        String locator="//input[@value='"+day+"']";
+        return Driver.get().findElement(By.xpath(locator));
     }
 
     

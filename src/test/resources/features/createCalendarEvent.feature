@@ -1,3 +1,4 @@
+@smoke
 Feature: Create Calendar Events Page
   Scenario: Test Case 5
     Given let user logged in as "usernamestoremanager" "password"
@@ -16,7 +17,7 @@ Feature: Create Calendar Events Page
     Then verify that "Daily" is selected as default and see the following options
       | Daily   |
       | Weekly  |
-      | Monthty |
+      | Monthly |
       | Yearly  |
 
 
@@ -39,7 +40,7 @@ Feature: Create Calendar Events Page
     And user enters "10" as an occurrence as an Ends option
     Then verify that  this message "Summary:Daily every 1 day, end after 10 occurrences" is displayed
 
-@wip
+
   Scenario: Test Case 11
     Given let user logged in as "usernamestoremanager" "password"
     When  user navigates "Activities" "Calendar Events"
@@ -47,5 +48,16 @@ Feature: Create Calendar Events Page
     And user select repeat check box
     And user  select By "Nov 18, 2021" as an Ends option
     Then verify that the message "Summary:Daily every 1 day, end by Nov 18, 2021" is displayed
+  @wip
+  Scenario: Test Case 12
+    Given let user logged in as "usernamestoremanager" "password"
+    When  user navigates "Activities" "Calendar Events"
+    And user click on create Calendar Event option
+    And user select repeat check box
+    And user selects "Weekly" options as a Repeat option
+    And user selects "monday" and "friday" options as a Repeat on options
+    Then verify that following message "Summary:Weekly every 1 week on Monday, Friday" is displayed
+
+
 
 

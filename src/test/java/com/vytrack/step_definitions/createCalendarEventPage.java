@@ -12,6 +12,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -243,6 +244,33 @@ public class createCalendarEventPage {
                 createCalendarEvent.byDateText.getText();
         System.out.println("actualText = " + actualText);
         assertEquals(expectedText,actualText);
+    }
+    @When("user selects {string} options as a Repeat option")
+    public void user_selects_options_as_a_Repeat_option(String string) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        Select repeatOptions = createCalendarEvent.getRepeatOptions();
+        
+        repeatOptions.selectByVisibleText(string);
+        String actualOption = repeatOptions.getFirstSelectedOption().getText();
+        System.out.println("actualOption = " + actualOption);
+
+    }
+
+    @When("user selects {string} and {string} options as a Repeat on options")
+    public void user_selects_and_options_as_a_Repeat_on_options(String day1, String day2) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        createCalendarEvent.repeatOnDay(day1).click();
+        createCalendarEvent.repeatOnDay(day2).click();
+
+    }
+
+    @Then("verify that following message {string} is displayed")
+    public void verify_that_following_message_is_displayed(String expectedText) {
+        CreateCalendarEvent createCalendarEvent = new CreateCalendarEvent();
+        String actualText=createCalendarEvent.summaryText.getText()+createCalendarEvent.repeatOnDaysText.getText();
+
+        assertEquals(expectedText,actualText);
+
 
     }
 

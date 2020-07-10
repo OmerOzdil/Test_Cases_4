@@ -74,7 +74,7 @@ public class CreateCalendarEvent {
     @FindBy(xpath = "(//input[@type='radio'])[5]")
     public WebElement byRadioButton;
 
-    @FindBy(xpath = "//input[starts-with(@id,'dp15942')]")
+    @FindBy(xpath = "//input[starts-with(@id,'dp1594')]")
     public WebElement dateBox;
 
     @FindBy(xpath = "//span[starts-with(text(),', end by')]")

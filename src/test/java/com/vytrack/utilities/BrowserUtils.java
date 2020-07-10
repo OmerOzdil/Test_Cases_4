@@ -10,6 +10,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -395,6 +397,34 @@ public class BrowserUtils {
      */
     public static void waitForPresenceOfElement(By by, long time) {
         new WebDriverWait(Driver.get(), time).until(ExpectedConditions.presenceOfElementLocated(by));
+    }
+
+    /**
+     * this method take format of date/time (yyyy-MM-dd or hh:mm a)(yyyy-MM-dd hh:mm:ss a)
+     * two date as a string and return
+     * two date in date list as date format
+     *  @param format/type
+     *  @param date1/time
+     *  @param date2/time
+     */
+    public static List<Date> convertStringToDate(String format,String date1,String date2) throws ParseException {
+        List<Date> dates= new ArrayList<>();
+        DateFormat df = new SimpleDateFormat(format);
+        Date d1 = df.parse(date1);
+        Date d2 = df.parse(date2);
+        dates.add(d1);
+        dates.add(d2);
+        return dates;
+    }
+
+    /**
+     *  this method bring return message that is not exist in HTML
+     * @param inputBox
+     * @return
+     */
+    public static String getPlease_fill_in_this_field_Message(WebElement inputBox){
+        String message =inputBox.getAttribute("validationMessage");
+        return message;
     }
 
 

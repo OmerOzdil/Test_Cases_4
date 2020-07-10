@@ -80,7 +80,6 @@ public class CalenderEvents {
     public void user_click_on_create_calendar_event_option() {
 
         BrowserUtils.waitForPageToLoad(3);
-
         try{
             new CalendarEventPage().createCalendarEventButton.click();
         }catch (Exception e){
@@ -93,9 +92,13 @@ public class CalenderEvents {
     @Then("verify that {string} page title is displayed")
     public void verify_that_page_title_is_displayed(String string) {
 
+        BrowserUtils.waitForPageToLoad(3);
+
         Dashboard dashboard = new Dashboard();
         BrowserUtils.waitForPageToLoad(3);
         assertEquals(string,dashboard.pageTitle.getText());
+
+
 
     }
 

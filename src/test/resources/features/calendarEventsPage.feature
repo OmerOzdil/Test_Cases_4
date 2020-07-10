@@ -16,7 +16,7 @@
       When user navigates "Activities" "Calendar Events"
       And user click on create Calendar Event option
       Then verify that Save and Close,Save and New and Save options available
-
+  @jenkins
     Scenario: Test Case 4
       Given let user logged in as "usernamestoremanager" "password"
       When  user navigates "Activities" "Calendar Events"

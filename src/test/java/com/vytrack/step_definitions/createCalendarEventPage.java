@@ -10,6 +10,7 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 
 import java.text.ParseException;
@@ -60,6 +61,7 @@ public class createCalendarEventPage {
         System.out.println("endTime = " + endTime);
 
         assertEquals(1,endTime.compareTo(starttime));
+
 
     }
 
@@ -228,11 +230,7 @@ public class createCalendarEventPage {
         //BrowserUtils.waitForVisibility(createCalendarEvent.dateBox,3);
         //createCalendarEvent.dateBox.sendKeys(date);
         BrowserUtils.waitFor(1);
-
-        JavascriptExecutor jse = (JavascriptExecutor) Driver.get();
-        jse.executeScript("arguments[0].value='Nov 18,2021';", createCalendarEvent.dateBox);
-
-        createCalendarEvent.dateBox.submit();
+        createCalendarEvent.dateBox.sendKeys(date,Keys.ENTER);
 
     }
 

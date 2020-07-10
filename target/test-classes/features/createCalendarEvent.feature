@@ -1,11 +1,12 @@
 @smoke
 Feature: Create Calendar Events Page
-
   Scenario: Test Case 5
     Given let user logged in as "usernamestoremanager" "password"
     When user navigates "Activities" "Calendar Events"
     And user click on create Calendar Event option
     Then verify that difference between end and start time is exactly 1 hour
+
+
 
   Scenario: Test Case 8
     Given let user logged in as "usernamestoremanager" "password"
@@ -18,6 +19,7 @@ Feature: Create Calendar Events Page
       | Weekly  |
       | Monthly |
       | Yearly  |
+
 
   Scenario: Test Case 9
     Given let user logged in as "usernamestoremanager" "password"

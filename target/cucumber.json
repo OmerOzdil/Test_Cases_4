@@ -1,0 +1,903 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2020-07-10T13:44:01.175Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5978160500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Test Case 5",
+        "description": "",
+        "id": "create-calendar-events-page;test-case-5",
+        "after": [
+          {
+            "result": {
+              "duration": 734731000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5165536800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "let user logged in as \"usernamestoremanager\" \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usernamestoremanager\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3961905700,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user navigates \"Activities\" \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 3283505100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user click on create Calendar Event option",
+            "match": {
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1222029900,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "verify that difference between end and start time is exactly 1 hour",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 61
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_difference_between_end_and_start_time_is_exactly_hour(java.lang.Integer)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T13:44:21.546Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5367799100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "Test Case 8",
+        "description": "",
+        "id": "create-calendar-events-page;test-case-8",
+        "after": [
+          {
+            "result": {
+              "duration": 696831700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5146035200,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "let user logged in as \"usernamestoremanager\" \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usernamestoremanager\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4589690000,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "user navigates \"Activities\" \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1022614000,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "user click on create Calendar Event option",
+            "match": {
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1725131700,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "user select repeat check box",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_select_repeat_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 34043900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "verify that repeat check box is selected",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_repeat_check_box_is_selected()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 398578300,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "verify that \"Daily\" is selected as default and see the following options",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Daily\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_is_selected_as_default_and_see_the_following_options(java.lang.String,java.util.List\u003cjava.lang.String\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Daily"
+                ]
+              },
+              {
+                "cells": [
+                  "Weekly"
+                ]
+              },
+              {
+                "cells": [
+                  "Monthly"
+                ]
+              },
+              {
+                "cells": [
+                  "Yearly"
+                ]
+              }
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T13:44:40.531Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5393343600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 24,
+        "name": "Test Case 9",
+        "description": "",
+        "id": "create-calendar-events-page;test-case-9",
+        "after": [
+          {
+            "result": {
+              "duration": 713508400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5589120100,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "let user logged in as \"usernamestoremanager\" \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usernamestoremanager\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4750533100,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "user navigates \"Activities\" \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 521075600,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "user click on create Calendar Event option",
+            "match": {
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1803075400,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "user select repeat check box",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_select_repeat_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 27982300,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "verify that repeat check box is selected",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_repeat_check_box_is_selected()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 35042000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "verify that repeat every button is selected",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_repeat_every_button_is_selected()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 29377500,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "verify that Never radio button is selected as an Ends option",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_never_radio_button_is_selected_as_an_ends_option()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 90193300,
+              "status": "passed"
+            },
+            "line": 32,
+            "name": "verify that \"Summary:Daily every 1 day\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Summary:Daily every 1 day\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_is_displayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T13:44:59.487Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5404972300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "Test Case 10",
+        "description": "",
+        "id": "create-calendar-events-page;test-case-10",
+        "after": [
+          {
+            "result": {
+              "duration": 714522500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5164901900,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "let user logged in as \"usernamestoremanager\" \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usernamestoremanager\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 5460777300,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "user navigates \"Activities\" \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 559683900,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "user click on create Calendar Event option",
+            "match": {
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1735680700,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "user select repeat check box",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_select_repeat_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 326081200,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "user enters \"10\" as an occurrence as an Ends option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"10\"",
+                  "offset": 12
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_enters_as_an_occurrence_as_an_ends_option(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 181107800,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "verify that  this message \"Summary:Daily every 1 day, end after 10 occurrences\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Summary:Daily every 1 day, end after 10 occurrences\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_this_message_is_displayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T13:45:19.042Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5403983100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "Test Case 11",
+        "description": "",
+        "id": "create-calendar-events-page;test-case-11",
+        "after": [
+          {
+            "result": {
+              "duration": 720891500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4942636000,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "let user logged in as \"usernamestoremanager\" \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usernamestoremanager\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4588201100,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "user navigates \"Activities\" \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 993129800,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "user click on create Calendar Event option",
+            "match": {
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2295522100,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "user select repeat check box",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_select_repeat_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1472333600,
+              "status": "passed"
+            },
+            "line": 49,
+            "name": "user  select By \"Nov 18, 2021\" as an Ends option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Nov 18, 2021\"",
+                  "offset": 16
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_select_by_as_an_ends_option(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2124916800,
+              "status": "passed"
+            },
+            "line": 50,
+            "name": "verify that the message \"Summary:Daily every 1 day, end by Nov 18, 2021\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Summary:Daily every 1 day, end by Nov 18, 2021\"",
+                  "offset": 24
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_the_message_is_displayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-07-10T13:45:41.590Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5426211900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 52,
+        "name": "Test Case 12",
+        "description": "",
+        "id": "create-calendar-events-page;test-case-12",
+        "after": [
+          {
+            "result": {
+              "duration": 719960600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "com.vytrack.step_definitions.Hooks.tearDown()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 6226374300,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "let user logged in as \"usernamestoremanager\" \"password\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"usernamestoremanager\"",
+                  "offset": 22
+                },
+                {
+                  "val": "\"password\"",
+                  "offset": 45
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 4919019300,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "user navigates \"Activities\" \"Calendar Events\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Activities\"",
+                  "offset": 15
+                },
+                {
+                  "val": "\"Calendar Events\"",
+                  "offset": 28
+                }
+              ],
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 510919800,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "user click on create Calendar Event option",
+            "match": {
+              "location": "com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1711366400,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "user select repeat check box",
+            "match": {
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_select_repeat_check_box()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 314316500,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "user selects \"Weekly\" options as a Repeat option",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Weekly\"",
+                  "offset": 13
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_selects_options_as_a_Repeat_option(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 263429000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "user selects \"monday\" and \"friday\" options as a Repeat on options",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"monday\"",
+                  "offset": 13
+                },
+                {
+                  "val": "\"friday\"",
+                  "offset": 26
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.user_selects_and_options_as_a_Repeat_on_options(java.lang.String,java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 90574200,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "verify that following message \"Summary:Weekly every 1 week on Monday, Friday\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Summary:Weekly every 1 week on Monday, Friday\"",
+                  "offset": 30
+                }
+              ],
+              "location": "com.vytrack.step_definitions.createCalendarEventPage.verify_that_following_message_is_displayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@smoke"
+          },
+          {
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "Create Calendar Events Page",
+    "description": "",
+    "id": "create-calendar-events-page",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/createCalendarEvent.feature",
+    "tags": [
+      {
+        "name": "@smoke",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]

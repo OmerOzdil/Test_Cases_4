@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Cucumber HTML Reports</td>
+        <td>1</td>
+      <td>10 Jul 2020, 14:46</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.CalenderEvents.let_user_logged_in_as(java.lang.String,java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="5372434050">5.372</td>
+              <td class="duration" data-value="5372434050">6.226</td>
+              <td class="duration" data-value="32234604300">32.234</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.CalenderEvents.user_click_on_create_calendar_event_option()</td>
+              <td>6</td>
+              <td class="duration" data-value="1148488033">1.148</td>
+              <td class="duration" data-value="1148488033">3.283</td>
+              <td class="duration" data-value="6890928200">6.890</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.CalenderEvents.user_navigates(java.lang.String,java.lang.String)</td>
+              <td>6</td>
+              <td class="duration" data-value="4711687750">4.711</td>
+              <td class="duration" data-value="4711687750">5.460</td>
+              <td class="duration" data-value="28270126500">28.270</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.Hooks.setUp()</td>
+              <td>6</td>
+              <td class="duration" data-value="5495745083">5.495</td>
+              <td class="duration" data-value="5495745083">5.978</td>
+              <td class="duration" data-value="32974470500">32.974</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.Hooks.tearDown()</td>
+              <td>6</td>
+              <td class="duration" data-value="716740950">0.716</td>
+              <td class="duration" data-value="716740950">0.734</td>
+              <td class="duration" data-value="4300445700">4.300</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.user_enters_as_an_occurrence_as_an_ends_option(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="326081200">0.326</td>
+              <td class="duration" data-value="326081200">0.326</td>
+              <td class="duration" data-value="326081200">0.326</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.user_select_by_as_an_ends_option(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="1472333600">1.472</td>
+              <td class="duration" data-value="1472333600">1.472</td>
+              <td class="duration" data-value="1472333600">1.472</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.user_select_repeat_check_box()</td>
+              <td>5</td>
+              <td class="duration" data-value="1854155260">1.854</td>
+              <td class="duration" data-value="1854155260">2.295</td>
+              <td class="duration" data-value="9270776300">9.270</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.user_selects_and_options_as_a_Repeat_on_options(java.lang.String,java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="263429000">0.263</td>
+              <td class="duration" data-value="263429000">0.263</td>
+              <td class="duration" data-value="263429000">0.263</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.user_selects_options_as_a_Repeat_option(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="314316500">0.314</td>
+              <td class="duration" data-value="314316500">0.314</td>
+              <td class="duration" data-value="314316500">0.314</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_difference_between_end_and_start_time_is_exactly_hour(java.lang.Integer)</td>
+              <td>1</td>
+              <td class="duration" data-value="1222029900">1.222</td>
+              <td class="duration" data-value="1222029900">1.222</td>
+              <td class="duration" data-value="1222029900">1.222</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_following_message_is_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="90574200">0.090</td>
+              <td class="duration" data-value="90574200">0.090</td>
+              <td class="duration" data-value="90574200">0.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_is_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="90193300">0.090</td>
+              <td class="duration" data-value="90193300">0.090</td>
+              <td class="duration" data-value="90193300">0.090</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_is_selected_as_default_and_see_the_following_options(java.lang.String,java.util.List&lt;java.lang.String&gt;)</td>
+              <td>1</td>
+              <td class="duration" data-value="398578300">0.398</td>
+              <td class="duration" data-value="398578300">0.398</td>
+              <td class="duration" data-value="398578300">0.398</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_never_radio_button_is_selected_as_an_ends_option()</td>
+              <td>1</td>
+              <td class="duration" data-value="29377500">0.029</td>
+              <td class="duration" data-value="29377500">0.029</td>
+              <td class="duration" data-value="29377500">0.029</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_repeat_check_box_is_selected()</td>
+              <td>2</td>
+              <td class="duration" data-value="31013100">0.031</td>
+              <td class="duration" data-value="31013100">0.034</td>
+              <td class="duration" data-value="62026200">0.062</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_repeat_every_button_is_selected()</td>
+              <td>1</td>
+              <td class="duration" data-value="35042000">0.035</td>
+              <td class="duration" data-value="35042000">0.035</td>
+              <td class="duration" data-value="35042000">0.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_the_message_is_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="2124916800">2.124</td>
+              <td class="duration" data-value="2124916800">2.124</td>
+              <td class="duration" data-value="2124916800">2.124</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.vytrack.step_definitions.createCalendarEventPage.verify_that_this_message_is_displayed(java.lang.String)</td>
+              <td>1</td>
+              <td class="duration" data-value="181107800">0.181</td>
+              <td class="duration" data-value="181107800">0.181</td>
+              <td class="duration" data-value="181107800">0.181</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>19</td>
+            <td>49</td>
+            <td class="duration">2.460</td>
+            <td class="duration">32.974</td>
+            <td class="duration">2:0.551</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>
